@@ -15,22 +15,11 @@
 </head>
 <body>
     <h1>Blade/Index</h1>
-    @unless ($msg == '')
-    <p>こんにちは、unlessさん</p>
-    @endunless
-    @empty ($msg)
-    <p>こんにちは、emptyさん</p>
-    @endif
-    @if ($msg != '')
+    @isset ($msg)
     <p>こんにちは、{{$msg}}さん</p>
     @else
-    <p>何か書いてください</p>
-    @endif
-    <!-- @isset ($msg)
-    <p>こんにちは、{{$msg}}さん</p>
-    @else
-    <p>msgが未定義です</p>
-    @endisset -->
+    <p>未定義です</p>
+    @endisset
     <form method="POST" action="/hello">
         {{ csrf_field() }}
         <input type="text" name="msg">
