@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 class ExtendController extends Controller
 {
     public function index(Request $request){
-        return view('extend.index',[
-            'message'=>'Hello!',
-            'data'=>$request->data
-        ]);
+        return view('extend.index');
     }
 }
