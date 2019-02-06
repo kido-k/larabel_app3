@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\ExtendMiddleware;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -9,4 +11,5 @@ Route::post('hello','HelloController@post');
 
 Route::get('for','ForController@index');
 
-Route::get('extend','ExtendController@index');
+Route::get('extend','ExtendController@index')
+        ->middleware(ExtendMiddleware::class);

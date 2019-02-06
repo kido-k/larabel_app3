@@ -24,10 +24,10 @@
     </ul>
     <hr size="1">
     <div class="content">
-    @yield('content')
+        @yield('content')
     </div>
     <div class="footer">
-    @yield('footer')
+        @yield('footer')
     </div>
 </body>
 </html>
