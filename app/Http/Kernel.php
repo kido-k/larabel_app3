@@ -46,6 +46,10 @@ class Kernel extends HttpKernel
         'extend' => [
             \App\Http\Middleware\ExtendMiddleware::class,
         ],
+
+        'validate' => [
+            \App\Http\Middleware\ValidateMiddleware::class,
+        ],
     ];
 
     /**
