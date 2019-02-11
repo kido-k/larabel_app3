@@ -18,3 +18,6 @@ Route::post('validate', 'ValidateController@post');
 Route::get('cookie', 'CookieController@index');
 Route::post('cookie', 'CookieController@post');
 
+Route::get('db', 'DBController@index');
+Route::post('db', 'DBController@post');
+
