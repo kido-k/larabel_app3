@@ -15,3 +15,6 @@ Route::get('extend', 'ExtendController@index')
 Route::get('validate', 'ValidateController@index');
 Route::post('validate', 'ValidateController@post');
 
+Route::get('cookie', 'CookieController@index');
+Route::post('cookie', 'CookieController@post');
+
