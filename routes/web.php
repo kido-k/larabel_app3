@@ -27,3 +27,7 @@ Route::post('db/edit', 'DBController@update');
 Route::get('db/del', 'DBController@del');
 Route::post('db/del', 'DBController@remove');
 Route::get('db/show', 'DBController@show');
+
+Route::get('person', 'PersonController@index');
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'PersonController@search');
