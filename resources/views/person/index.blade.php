@@ -24,12 +24,26 @@
     @endforeach --}}
 
     {{-- second --}}
-    <tr>
+    {{-- <tr>
         <th>Data:</th>
     </tr>
     @foreach ($items as $item)
     <tr>
         <td>{{$item->getData()}}</td>
+    </tr>
+    @endforeach --}}
+
+    {{-- third --}}
+    <tr>
+        <th>Person</th>
+        <th>Board</th>
+    </tr>
+    @foreach ($items as $item)
+    <tr>
+        <td>{{$item->getData()}}</td>
+        <td>@if($item->board != null)
+            {{$item->board->getData()}}</td>
+        @endif
     </tr>
     @endforeach
 </table>
