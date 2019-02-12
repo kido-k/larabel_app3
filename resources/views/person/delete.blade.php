@@ -1,10 +1,10 @@
 @extends('layouts.personapp')
 
-@section('title','Person.Edit')
+@section('title','Person.Delete')
 
 @section('menubar')
 @parent
-編集ページ
+削除ページ
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
 </div>
 @endif
 <table>
-<form action="/person/edit" method="post">
+<form action="/person/delete" method="post">
     {{csrf_field()}}
     <input type="hidden" name="id" value="{{$form->id}}"></td>
     </tr>
