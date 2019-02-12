@@ -20,4 +20,9 @@ Route::post('cookie', 'CookieController@post');
 
 Route::get('db', 'DBController@index');
 Route::post('db', 'DBController@post');
-
+Route::get('db/add', 'DBController@add');
+Route::post('db/add', 'DBController@create');
+Route::get('db/edit', 'DBController@edit');
+Route::post('db/edit', 'DBController@update');
+Route::get('db/del', 'DBController@del');
+Route::post('db/del', 'DBController@remove');
