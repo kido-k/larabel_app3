@@ -47,4 +47,5 @@ Route::resource('rest', 'RestAppController');
 Route::get('session', 'SessionController@ses_get');
 Route::post('session', 'SessionController@ses_put');
 
-
+Route::get('page', 'PageController@index');
+Route::post('page', 'PageController@post');
