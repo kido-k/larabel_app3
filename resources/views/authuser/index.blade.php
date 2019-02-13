@@ -1,38 +1,32 @@
 @extends('layouts.pageapp')
-<style>
-    .pagination {
-        font-size: 14px
-    }
 
-    .pagination li {
-        display: inline-block
-    }
-
-    tr th a:link {
-        color: white;
-    }
-
-    tr th a:visited {
-        color: white;
-    }
-
-    tr th a:hover {
-        color: white;
-    }
-
-    tr th a:active {
-        color: white;
-    }
-
-</style>
-@section('title','Index')
+@section('title','ユーザー認証')
 
 @section('menubar')
 @parent
-インデックスページ
+ユーザー認証
 @endsection
 
 @section('content')
+<p>{{$message}}</p>
+<table>
+    <form action="/authuser" method="POST">
+        {{ csrf_field() }}
+        <tr>
+            <th>mail: </th>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <th>pass: </th>
+            <td><input type="password" name="password"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="send"></td>
+        </tr>
+    </form>
+</table>
+
 @if(Auth::check())
 <p>User: {{$user->name.' ('.$user->email.')'}}</p>
 <a href="/home">home</a>

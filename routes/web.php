@@ -50,7 +50,9 @@ Route::post('session', 'SessionController@ses_put');
 Route::get('page', 'PageController@index');
 Route::post('page', 'PageController@post');
 
-Route::get('authuser', 'AuthUserController@index');
+// Route::get('authuser', 'AuthUserController@index');
+Route::get('authuser', 'AuthUserController@getAuth');
+Route::post('authuser', 'AuthUserController@postAuth');
 
 Auth::routes();
 
