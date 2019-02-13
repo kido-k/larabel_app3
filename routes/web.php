@@ -49,3 +49,7 @@ Route::post('session', 'SessionController@ses_put');
 
 Route::get('page', 'PageController@index');
 Route::post('page', 'PageController@post');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
