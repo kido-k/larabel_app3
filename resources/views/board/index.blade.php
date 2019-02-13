@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-<table>
+{{-- <table>
     <tr>
         <th>Data</th>
     </tr>
@@ -17,7 +17,19 @@
         <td>{{$item->getData()}}</td>
     </tr>
     @endforeach
-</table>
+</table> --}}
+<table>
+        <tr>
+            <th>Message</th>
+            <th>Name</th>
+        </tr>
+        @foreach ($items as $item)
+        <tr>
+            <td>{{$item->message}}</td>
+            <td>{{$item->person->name}}</td>
+        </tr>
+        @endforeach
+    </table>
 @endsection
 
 @section('footer')
