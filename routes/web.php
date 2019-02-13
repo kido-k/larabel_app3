@@ -44,3 +44,7 @@ Route::post('board/add', 'BoardController@create');
 
 Route::resource('rest', 'RestAppController');
 
+Route::get('session', 'SessionController@ses_get');
+Route::post('session', 'SessionController@ses_put');
+
+
