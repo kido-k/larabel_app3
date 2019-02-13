@@ -33,7 +33,6 @@ class AuthUserController extends Controller
         } else {
             $msg = 'ログインに失敗しました。';
         }
-        $msg = 'ログインに失敗しました。';
         return view('authuser.index', ['message' => $msg]);
     }
 }
